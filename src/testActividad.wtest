@@ -1,0 +1,20 @@
+import actividades.*
+
+
+describe "Test Excursion a ciudad"{
+	
+	const excursionCiudad = new ViajeExcursionACiudad(cantidadAtracciones=4)
+	
+	
+	test "lleva 2 dias"{
+		assert.equals(2, excursionCiudad.cantidadDias())
+	}
+	
+	test "no implica esfuerzo"{
+		assert.notThat(excursionCiudad.implicaEsfuerzo())
+	}
+	
+	test "no sirve para broncearse"{
+		assert.notThat(excursionCiudad.esParaBroncearse())
+	}
+}
