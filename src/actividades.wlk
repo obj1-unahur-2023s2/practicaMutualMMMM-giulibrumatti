@@ -55,7 +55,7 @@ class ViajeExcursionACiudad inherits Viaje{
 	
 	override method cantidadDias() = cantidadAtracciones / 2
 	
-	override method implicaEsfuerzo() = cantidadAtracciones > 5 && cantidadAtracciones < 8
+	override method implicaEsfuerzo() = cantidadAtracciones > 5 && cantidadAtracciones <= 8
 		
 	override method esInteresante() = super() || cantidadAtracciones == 5
 }

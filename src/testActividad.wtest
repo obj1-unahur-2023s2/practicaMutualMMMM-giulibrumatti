@@ -18,3 +18,114 @@ describe "Test Excursion a ciudad"{
 		assert.notThat(excursionCiudad.esParaBroncearse())
 	}
 }
+
+describe "Test excursión a ciudad tropical"{
+	const excursionTropical = new ViajeExcursionTropical(cantidadAtracciones=4)
+	
+	test "lleva 3 días"{
+		assert.equals(3,excursionTropical.cantidadDias())
+	}
+	
+	test "no implica esfuerzo"{
+		assert.notThat(excursionTropical.implicaEsfuerzo())
+	}
+	
+	test "sirve para broncearse"{
+		assert.that(excursionTropical.esParaBroncearse())
+	}
+}
+
+describe "Test excursion a ciudad 2"{
+	const excursionCiudad = new ViajeExcursionACiudad(cantidadAtracciones=8)
+	
+	test "lleva 4 días"{
+		assert.equals(4,excursionCiudad.cantidadDias())
+	}
+		test "implica esfuerzo"{
+		assert.that(excursionCiudad.implicaEsfuerzo())
+	}
+	test "no sirve para broncearse"{
+		assert.notThat(excursionCiudad.esParaBroncearse())
+	}
+}
+
+describe "Test excursión a ciudad tropical 2"{
+	const excursionTropical = new ViajeExcursionTropical(cantidadAtracciones=8)
+	
+	test "lleva 5 días"{
+		assert.equals(5,excursionTropical.cantidadDias())
+	}
+	
+	test "implica esfuerzo"{
+		assert.that(excursionTropical.implicaEsfuerzo())
+	}
+	
+	test "sirve para broncearse"{
+		assert.that(excursionTropical.esParaBroncearse())
+	}
+}
+
+describe "Test excursión a ciudad tropical 3"{
+	const excursionTropical = new ViajeExcursionTropical(cantidadAtracciones=10)
+	
+	test "lleva 6 días"{
+		assert.equals(6,excursionTropical.cantidadDias())
+	}
+	
+	test "NO implica esfuerzo"{
+		assert.notThat(excursionTropical.implicaEsfuerzo())
+	}
+	
+	test "sirve para broncearse"{
+		assert.that(excursionTropical.esParaBroncearse())
+	}
+}
+
+describe "Test salida de trekking"{
+	const saltre = new ViajeSalidaTrekking(kmSendero=100, diasSolXAnio=130)
+	
+		test "lleva 2 días"{
+		assert.equals(2,saltre.cantidadDias())
+	}
+	
+	test "implica esfuerzo"{
+		assert.that(saltre.implicaEsfuerzo())
+	}
+	
+	test "NO sirve para broncearse"{
+		assert.notThat(saltre.esParaBroncearse())
+	}
+}
+
+describe "Test salida de trekking 2"{
+	const saltre = new ViajeSalidaTrekking(kmSendero=50, diasSolXAnio=240)
+	
+		test "lleva 1 días"{
+		assert.equals(1,saltre.cantidadDias())
+	}
+	
+	test "NO implica esfuerzo"{
+		assert.notThat(saltre.implicaEsfuerzo())
+	}
+	
+	test "sirve para broncearse"{
+		assert.that(saltre.esParaBroncearse())
+	}
+}
+
+describe "Test salida de trekking 3"{
+	const saltre = new ViajeSalidaTrekking(kmSendero=250, diasSolXAnio=130)
+	
+		test "lleva 5 días"{
+		assert.equals(5,saltre.cantidadDias())
+	}
+	
+	test "implica esfuerzo"{
+		assert.that(saltre.implicaEsfuerzo())
+	}
+	
+	test "sirve para broncearse"{
+		assert.that(saltre.esParaBroncearse())
+	}
+}
+
